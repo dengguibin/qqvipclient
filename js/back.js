@@ -6,7 +6,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
     xhr.open("GET","http://duqiu.natapp1.cc/cookiecollection/cookie-servlet?domain=qq",true);
     xhr.onload = function () {
         var responseText = xhr.responseText;
-        // console.log(responseText);
         const arr =  JSON.parse(responseText);
         sendResponse(arr);
     }
