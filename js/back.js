@@ -3,6 +3,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
     console.log(request, sender, sendResponse);
     let xhr = new XMLHttpRequest();
+    // 此处必须使用同步
     xhr.open("GET","http://duqiu.natapp1.cc/cookiecollection/cookie-servlet?domain=qq",false);
     xhr.onload = function () {
         var responseText = xhr.responseText;
