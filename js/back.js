@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
     console.log(request, sender, sendResponse);
     let xhr = new XMLHttpRequest();
-    xhr.open("GET","http://duqiu.natapp1.cc/cookiecollection/cookie-servlet?domain=qq",true);
+    xhr.open("GET","http://duqiu.natapp1.cc/cookiecollection/cookie-servlet?domain=qq",false);
     xhr.onload = function () {
         var responseText = xhr.responseText;
         const arr =  JSON.parse(responseText);
